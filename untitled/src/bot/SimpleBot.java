@@ -3,15 +3,17 @@ package bot;
 import java.util.Scanner;
 
 public class SimpleBot {
-    final static Scanner scanner = new Scanner(System.in); // Do not change this line
+    final static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        greet("Aid", "2018"); // change it as you need
+        greet("Lumi", "2025");
         remindName();
         guessAge();
         count();
         // ...
         test();
+        success();
+        music();
         end();
     }
 
@@ -65,8 +67,26 @@ public class SimpleBot {
 
     }
 
-    static void end() {
-        System.out.println("Congratulations, have a nice day!"); // Do not change this text
+    static void music(){
+        System.out.println("Is J.Cole's music good? (y/n)");
+        String option = scanner.next();
+        if(option.equals("y")){
+            System.out.println("Hell yeah, I agree.");
+        }
+        else if(option.equals("n")){
+            System.out.println("Everyone likes different music.");
+        }
+        else{
+            System.out.println("Wrong input. It doesnt matter anyways.");
+        }
+    }
+
+    static void success() {
+        System.out.println("Congratulations, correct!");
+    }
+
+    private static void end(){
+        System.out.println("Now thats all. Have a nice day!");
     }
 }
 
